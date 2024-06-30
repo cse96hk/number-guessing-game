@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>숫자 맞추기 게임</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>1부터 100 까지 숫자 중 램덤 숫자 맞추기 게임</h1>
+            <div class="image-container">
+                <img class="main-img" src="https://crepe.land/tiptap/v/vh/vht4zfraeziufhxs12zwpdorcjvmxyjd_slotmachine_color.spine.gif" alt="Game Image" width="300" />
+                <div class="bbacom">
+                    <img src="https://item.kakaocdn.net/do/d1aecca57ce6678e4beb8dfbdc4003bd8f324a0b9c48f77dbce3a43bd11ce785" alt="" />
+                </div>
+            </div>
+            <div class="status-area">남은횟수: 5회</div>
+            <div class="result">
+                <p id="resultMessage">여기에 결과 표시 됩니다.</p>
+            </div>
+            <div class="input-container">
+                <input type="number" id="guess" min="1" max="100" placeholder="숫자입력" />
+                <button id="guessButton">Go</button>
+                <button id="resetButton">Reset</button>
+                <button id="popupButton" onclick="showPopup()">게임설명</button>
+            </div>
+
+            <footer>Nam.GeunSoo© Copyright 2024. All Rights Reserved.</footer>
+        </div>
+
+        <div class="overlay" id="overlay" onclick="closePopup()"></div>
+        <div class="popup" id="popup">
+            <h2>게임 설명</h2>
+            <p>
+                숫자 맞추기 게임은 1부터 100 사이의 숫자를 맞추는 게임입니다. 각 시도 후 결과가 표시되며, 남은 횟수가 0이 될 때까지 숫자를 맞춰야 합니다. 성공적으로 맞추면 게임이
+                종료됩니다.
+            </p>
+            <p>
+                컴퓨터는 게임이 시작할 때 랜덤한 숫자를 뽑습니다. 유저는 숫자를 입력할 수 있습니다. 유저가 입력한 숫자가 컴퓨터가 뽑은 숫자보다 작으면 "Up!"이라고 알려줍니다.
+                유저가 입력한 숫자가 컴퓨터가 뽑은 숫자보다 크면 "Down!"이라고 알려줍니다. 유저가 입력한 숫자가 컴퓨터가 뽑은 숫자와 일치하면 "That's right"이라고 뜨고 게임이
+                종료됩니다. 유저는 총 5번의 기회가 있습니다. 게임이 종료되면 버튼은 비활성화됩니다. 리셋 버튼을 누르면 게임이 초기화됩니다. 유저가 1~100 범위 밖의 숫자를 입력할
+                시에 경고 메시지가 뜹니다. 유저가 이미 입력한 값을 또 입력할 시에 경고 메시지가 뜹니다.
+            </p>
+            <button id="closeButton" onclick="closePopup()">Close</button>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
