@@ -26,7 +26,7 @@
 
 스크린 샷
 ---
-![screenshot](https://hackmd.io/_uploads/HJJ8O50LR.png)
+![screenshot](https://github.com/cse96hk/number-guessing-game/blob/main/screenshot.png)
 
 기능
 ---
