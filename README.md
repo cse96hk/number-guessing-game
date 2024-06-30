@@ -26,7 +26,7 @@
 
 도메인 연결
 ---
-> <a href="https://www.google.com/" target="_blank">새 탭에서 열기</a>
+> <a href="https://num-in-game.netlify.app" target="_blank">숫자맞추기게임 바로가기</a>
 
 스크린 샷
 ---
