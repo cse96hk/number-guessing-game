@@ -80,6 +80,7 @@ function checkGuess() {
     }
 }
 function resetGame() {
+    pickNumber();
     mainImg.src = "https://crepe.land/tiptap/v/vh/vht4zfraeziufhxs12zwpdorcjvmxyjd_slotmachine_color.spine.gif";
     resultMessage.textContent = "여기에 결과 표시 됩니다.";
     chances = 5; // 남은횟수
