@@ -75,7 +75,7 @@ function checkGuess() {
         resultMessage.textContent = "Down!";
     } else {
         // 정답인 경우
-        mainImg.src = "https://i.pinimg.com/originals/b6/06/31/b606319bfe1ff2575ef091458e04b4fd.gif";
+        mainImg.src = "https://d2v80xjmx68n4w.cloudfront.net/gigs/r9SlZ1640678799.gif";
         resultMessage.textContent = "That's right!";
     }
 }
