@@ -26,8 +26,7 @@
 
 도메인 연결
 ---
-> [숫자맞추기 게임 링크 ]([링크주소](https://num-in-game.netlify.app/)){: target="_blank"}
-> [구글 웹싸이트 가기](http://google.com){ target="_blank"}
+> <a href="https://www.google.com/" target="_blank">새 탭에서 열기</a>
 
 스크린 샷
 ---
