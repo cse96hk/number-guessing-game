@@ -43,7 +43,7 @@ function checkGuess() {
     }
 
     if (userGuess < 1 || userGuess > 100) {
-        resultMessage.textContent = "1~100 범위 밖의 숫자를 입력해야 합니다.";
+        resultMessage.textContent = "1~100 범위 숫자를 입력해야 합니다.";
         return;
     }
     if (userGuessList.includes(userGuess)) {
