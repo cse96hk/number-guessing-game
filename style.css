@@ -104,6 +104,17 @@ footer {
     .input-container input[type="number"] {
         width: 80px;
     }
+    
+}
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    .input-container input[type="number"] {
+        width: 100px;
+    }
+    
 }
 
 /* 370px 이상의 화면 너비에 대한 스타일 */
@@ -123,6 +134,7 @@ footer {
     .bbacom{
         display: none;
     }
+    
 }
 .popup {
     display: none;
@@ -136,6 +148,9 @@ footer {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    width: 90%; /* 모바일 화면에 맞추기 위해 너비를 설정 */
+    max-width: 500px; /* 최대 너비 설정 */
+    box-sizing: border-box; /* 패딩 포함 박스 크기 설정 */
 }
 
 .popup h2 {
