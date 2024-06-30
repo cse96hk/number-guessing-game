@@ -37,9 +37,13 @@ function pickNumber() {
 function checkGuess() {
     let userGuess = parseInt(guess.value);
     console.log("입력한 숫자 : ", userGuess);
+    if (!userGuess) {
+        resultMessage.textContent = "숫자를 입력해야 합니다.";
+        return;
+    }
 
     if (userGuess < 1 || userGuess > 100) {
-        alert("1~100 범위 밖의 숫자를 입력해야 합니다.");
+        resultMessage.textContent = "1~100 범위 밖의 숫자를 입력해야 합니다.";
         return;
     }
     if (userGuessList.includes(userGuess)) {
