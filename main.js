@@ -10,6 +10,10 @@
 // 유저가 이미 입력한 값을 또 입력할 시에 경고메세지가 뜬다
 // 반응형 UI
 
+//24-07-01 추가내용
+//1. 게임 도전 횟수 제한 3회로 줄여주세요!
+//2. 정답을 화면에 표시해주세요!
+
 // 변수
 let computerNumber = 0; // 램덤숫자
 let guessButton = document.getElementById("guessButton"); // 게임시작한는 버튼
@@ -18,8 +22,9 @@ let guess = document.querySelector("#guess"); // 입력한 숫자
 let resultMessage = document.querySelector("#resultMessage"); // 단축된 상태
 let mainImg = document.querySelector(".main-img"); // 이미지
 let statusArea = document.querySelector(".status-area"); // 남은횟수
-let chances = 5; // 남은횟수
+let chances = 3; // 남은횟수
 let userGuessList = []; // 입력한 숫자의 목록
+let resultNum = document.querySelector("#result-num");
 
 // 이벤트
 guessButton.addEventListener("click", checkGuess); // go 버튼 클릭시
@@ -32,6 +37,7 @@ guess.addEventListener("focus", function (event) {
 function pickNumber() {
     computerNumber = Math.floor(Math.random() * 100) + 1; // 숫자를 뽑립니다. 1~100 범위 밖의 숫자를 뽑립니다.
     console.log("램덤숫자 : ", computerNumber);
+    resultNum.textContent = "램덤정답숫자 : " + computerNumber;
 }
 
 function checkGuess() {
@@ -83,7 +89,7 @@ function resetGame() {
     pickNumber();
     mainImg.src = "https://crepe.land/tiptap/v/vh/vht4zfraeziufhxs12zwpdorcjvmxyjd_slotmachine_color.spine.gif";
     resultMessage.textContent = "여기에 결과 표시 됩니다.";
-    chances = 5; // 남은횟수
+    chances = 3; // 남은횟수
     userGuessList = []; // 입력한 숫자의 목록 초기화
     statusArea.textContent = "남은횟수 : " + chances + "회";
     guessButton.disabled = false; //  버튼  활성화
