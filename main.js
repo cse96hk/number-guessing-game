@@ -56,20 +56,6 @@ function checkGuess() {
         resultMessage.textContent = "중복된 번호 입니다. 다시 입력해주세요";
         return;
     }
-
-    chances--; // 1개씩 감소
-    userGuessList.push(userGuess); // 입력한 숫자를 목록(배열)에 추가
-    statusArea.textContent = "남은횟수 : " + chances + "회";
-    console.log("입력한 숫자 목록 : ", userGuessList);
-
-    // 참여횟수 종료시
-    if (chances < 1) {
-        mainImg.src = "https://blog.kakaocdn.net/dn/bdLa2o/btqCKzRHK5c/LMQaVBNjPHYQsPVzS6Znvk/img.gif";
-        resultMessage.textContent = "GAME OVER";
-        guessButton.disabled = true; //버튼 비활성화
-        return;
-    }
-
     // 입력한 숫자 비교
     if (computerNumber > userGuess) {
         // 컴퓨터가 뽑은 숫자보다 작으면
@@ -79,10 +65,22 @@ function checkGuess() {
         // 컴퓨터가 뽑은 숫자보다 크면
         mainImg.src = "https://cacidsign.kr/web/product/big/201808/32b44658155b1187f624713cb0aa675c.gif";
         resultMessage.textContent = "Down!";
-    } else {
+    } else if (computerNumber == userGuess) {
         // 정답인 경우
         mainImg.src = "https://d2v80xjmx68n4w.cloudfront.net/gigs/r9SlZ1640678799.gif";
         resultMessage.textContent = "That's right!";
+        return;
+    }
+    chances--; // 1개씩 감소
+    userGuessList.push(userGuess); // 입력한 숫자를 목록(배열)에 추가
+    statusArea.textContent = "남은횟수 : " + chances + "회";
+    console.log("입력한 숫자 목록 : ", userGuessList);
+    // 참여횟수 종료시
+    if (chances < 1) {
+        mainImg.src = "https://blog.kakaocdn.net/dn/bdLa2o/btqCKzRHK5c/LMQaVBNjPHYQsPVzS6Znvk/img.gif";
+        resultMessage.textContent = "GAME OVER";
+        guessButton.disabled = true; //버튼 비활성화
+        return;
     }
 }
 function resetGame() {
